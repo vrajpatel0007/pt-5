@@ -53,7 +53,7 @@ const updaterecipe = async (req, res) => {
             body.ingredients = req.body.ingredients;
             body.instructions = req.body.instructions;
             body.cuisine = req.body.cuisine;
-        }
+        } 
         const updatedRecipe = await recipe_service.updateRecipe(recipeid, body);
 
         res.status(200).json({ message: "update recipe successfully", data: updatedRecipe });
